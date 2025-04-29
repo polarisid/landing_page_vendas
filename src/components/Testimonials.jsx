@@ -1,0 +1,1 @@
+export default function Testimonials() { return <section className='p-8'>Testimonials</section> }

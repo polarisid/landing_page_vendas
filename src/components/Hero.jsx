@@ -1,0 +1,1 @@
+export default function Hero() { return <section className='bg-blue-100 p-8'>Hero</section> }
