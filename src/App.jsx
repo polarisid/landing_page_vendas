@@ -5,11 +5,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
-
-import { Navigation } from 'swiper/modules';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+  
   return (
     <div className="font-sans">
       {/* Banner Rotativo */}
@@ -22,20 +27,44 @@ export default function App() {
       </section>
 
       {/* Hero */}
-      <section className="bg-[#1428A0] text-white text-center py-20 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Tecnologia Samsung para Sua Casa Completa</h1>
-        <p className="text-lg md:text-xl mb-6">Ofertas exclusivas em TVs, Smartphones, Ar-Condicionado, Linha Kitchen e muito mais.</p>
+      <section className="bg-[#1428A0] text-white py-20 px-6 md:px-12" data-aos="fade-in">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    
+    {/* Texto */}
+    <div className="md:w-1/2 text-center md:text-left">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Tudo Samsung em um só lugar
+      </h1>
+      <p className="text-lg md:text-xl mb-6">
+        Produtos originais com garantia, entrega rápida e atendimento personalizado via WhatsApp.
+      </p>
+      <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
         <a
           href="https://wa.me/5599999999999"
           target="_blank"
-          className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded text-lg inline-flex items-center gap-2"
+          className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded text-lg inline-flex items-center justify-center gap-2"
         >
-          <FaWhatsapp /> Falar com um Especialista Samsung
+          <FaWhatsapp /> Falar no WhatsApp
         </a>
-      </section>
+        <a
+          href="#produtos"
+          className="border border-white px-6 py-3 rounded text-lg hover:bg-white hover:text-[#1428A0] transition"
+        >
+          Ver Produtos
+        </a>
+      </div>
+    </div>
+
+    {/* Imagem */}
+    <div className="md:w-1/2">
+      <img src="/hero-banner.jpg" alt="Produtos Samsung" className="rounded-xl shadow-lg w-full max-w-md mx-auto" />
+    </div>
+  </div>
+</section>
+
 
       {/* Produtos */}
-      <section className="py-16 px-4 bg-gray-100 text-center">
+      <section className="py-16 px-4 bg-gray-100 text-center" data-aos="fade-in">
         <h2 className="text-3xl font-bold mb-10">Categorias de Produtos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <ProductCard
@@ -43,6 +72,7 @@ export default function App() {
             name="Televisores Smart 4K"
             price=""
             whatsappMessage="Olá! Tenho interesse na Smart TV 55'' que vi no site."
+            
           />
           <ProductCard
             images={["/public/celular.webp","/public/celular_2.webp"]}
@@ -88,7 +118,7 @@ export default function App() {
       </section>
 
       {/* Formulário de Contato */}
-      <section className="py-16 px-4 bg-blue-50 text-center">
+      <section className="py-16 px-4 bg-blue-50 text-center"  data-aos="fade-in">
         <h2 className="text-3xl font-bold mb-6">Solicite seu Orçamento Personalizado</h2>
         <form className="max-w-xl mx-auto grid grid-cols-1 gap-4">
           <input type="text" placeholder="Seu nome" className="border p-3 rounded" />
