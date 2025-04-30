@@ -68,38 +68,38 @@ export default function App() {
         <h2 className="text-3xl font-bold mb-10">Categorias de Produtos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <ProductCard
-            images={["/public/tv.webp"]}
+            images={["tv.webp"]}
             name="Televisores Smart 4K"
             price=""
             whatsappMessage="Olá! Tenho interesse na Smart TV 55'' que vi no site."
             
           />
           <ProductCard
-            images={["/public/celular.webp","/public/celular_2.webp"]}
+            images={["celular.webp","celular_2.webp"]}
             name="Smartphones"
             price=""
             whatsappMessage="Olá! Gostaria de saber mais sobre o Galaxy S23."
           />
           <ProductCard
-            images={["/public/geladeira.webp"]}
+            images={["geladeira.webp"]}
             name="Refrigeradores"
             price=""
             whatsappMessage="Olá! Me interessei pelo Refrigerador Samsung 460L."
           />
           <ProductCard
-            images={["/public/maquina.avif"]}
+            images={["maquina.avif"]}
             name="Lava e Seca"
             price=""
             whatsappMessage="Olá! Quero informações sobre a Lava e Seca Samsung."
           />
           <ProductCard
-            images={["/public/ar.avif"]}
+            images={["ar.avif"]}
             name="Ar-Condicionado"
             price="R$ 2.199,00"
             whatsappMessage="Olá! Gostaria de saber mais sobre o Ar-Condicionado WindFree."
           />
           <ProductCard
-            images={["/public/lava-louca.jpg"]}
+            images={["lava-louca.jpg"]}
             name="Linha Kitchen Samsung (Coifa, Lava-louças, Cooktop, Forno)"
             price=""
             whatsappMessage="Olá! Quero saber sobre os produtos da Linha Kitchen Samsung."
